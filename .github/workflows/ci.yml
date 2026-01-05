@@ -40,7 +40,7 @@ jobs:
       run: uv run python tests/test_precommit.py
     - name: Upload test results on failure
       if: failure()
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: precommit-test-failure-logs
         path: |
@@ -90,7 +90,7 @@ jobs:
       run: python tests/test_lefthook.py
     - name: Upload test results on failure
       if: failure()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: lefthook-test-failure-logs
         path: |
